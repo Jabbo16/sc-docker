@@ -1,29 +1,8 @@
-# StarCraft I (BroodWar) docker images
+# BASIL SC-Docker
 
-This repository prepares a fully working StarCraft: Brood War
-game running in Wine inside of docker image.
+[![Build Status](https://travis-ci.org/basil-ladder/sc-docker.svg?branch=master)](https://travis-ci.org/basil-ladder/sc-docker)
 
-It can download and launch bots that use BWAPI to communicate with the game.
-
-## About
-We are pleased to publish docker images for StarCraft: Brood War and BW bots!
-
-![Starcraft playing on Linux](resources/linux_play.png)
-
-This means the end of complicated game setup for newcomers or people
-who simply want to play StarCraft against AI bots.
-
-You can develop your bots on your favorite platform instead of relying on Windows.
-
-We have more things cooking: This is a part of our ongoing effort to create an easy-to-use environment for machine learning bots (bots that improve based on experience and self-play).
-
-This project is maintained by [Games & Simulations Research Group](http://gas.fel.cvut.cz/)
-which is also behind [Student StarCraft AI tournament (SSCAIT)](http://sscaitournament.com).
-
-[<img src="https://github.com/Games-and-Simulations/sc-docker/raw/master/resources/patreon.png" alt="">](https://www.patreon.com/sscait)
-
-If you like what we're doing, [support us on Patreon](https://www.patreon.com/sscait). We will be very grateful!
-
+This repository hosts the modified [sc-docker](https://github.com/Games-and-Simulations/sc-docker) used for running the [BASIL ladder](https://basil.bytekeeper.org/).
 
 ## Installation
 
@@ -33,7 +12,7 @@ It should run well on new versions of major operating systems. It was tested on:
 
 - Ubuntu 17.04 Zesty, `Linux 4.10.0-40-generic x86_64`
 - Microsoft Windows 10 (64-bit)
-- Mac OS Sieria 10.12.6 (64-bit, Mac mini)
+- Mac OS Sierra 10.12.6 (64-bit, Mac mini)
 
 Testing and reporting in other settings is very welcome!
 
@@ -72,29 +51,13 @@ See [more usage examples](USAGE.md).
 ## Specification
 
 - StarCraft 1.16.1 game from ICCUP (no need for special installs!)
-- BWAPI 3.7.4, 3.7.5, 4.1.2, 4.2.0
-- BWTA 2.2
+- BWAPI 3.7.4, 3.7.5, 4.1.2, 4.2.0, 4.4.0
 - SSCAI maps pack with BWTA/BWTA2 caches
-- 32bit oracle Java 8 `1.8.0_152-b16`
-- bwheadless `v0.1`
-- wine `2.20.0~xenial`
-- base image `ubuntu:xenial`
+- [Amazon Corretto 8](https://aws.amazon.com/en/corretto/)
+- bwheadless `v0.1` with LF3 patch
+- Wine 5
+- base image `ubuntu:bionic`
 - uses special [tournament module (TM)](github.com/Games-and-Simulations/sc-tm)
-
-## Dockerhub images
-
-Images are available on [Dockerhub](https://hub.docker.com/r/ggaic/starcraft/).
-
-You can use:
-
-    ggaic/starcraft:wine
-    ggaic/starcraft:bwapi
-    ggaic/starcraft:java
-    ggaic/starcraft:play
-
-These are latest stable images and are subject to change.
-
-You can use [stable images with version postfix, which correspond to git tags](https://hub.docker.com/r/ggaic/starcraft/tags/).
 
 ## Contributing
 
@@ -110,19 +73,3 @@ If you use `sc-docker` in your (academic) work, please cite [our Technical Repor
         Year = {2018},
         Eprint = {arXiv:1801.02193},
     }
-
-## Links
-
-Inspired by
-
-- https://github.com/TorchCraft/TorchCraft/blob/master/docker/no-cuda/Dockerfile
-- https://github.com/suchja/x11server/blob/master/Dockerfile
-- https://github.com/suchja/wine/blob/master/Dockerfile
-- https://hub.docker.com/r/lionax/docker-starcraft/~/dockerfile/
-
-Some useful links
-
-- https://github.com/TorchCraft/TorchCraft/blob/master/docs/user/bwapi_on_linux.md
-- https://github.com/TorchCraft/TorchCraft/blob/master/docs/user/installation.md
-- https://github.com/tscmoo/bwheadless/releases
-- https://github.com/tscmoo/bwheadless/blob/master/main.cpp#L918

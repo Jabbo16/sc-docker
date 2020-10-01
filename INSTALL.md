@@ -13,7 +13,7 @@ Table of contents:
   * [Windows](#windows)
   * [Mac](#mac)
 
-Docker version used to build the images is `17.09.0-ce`
+Docker version used to build the images is `17.09.0-ce`, but It should work with newer `docker-ce` versions.
 
 Currently supports only `Python >= 3.6`, but Py2/3 support is planned soon.
 
@@ -58,8 +58,8 @@ Lazy version with a lot of sudo (based on [this](http://ubuntuhandbook.org/index
     sudo apt-get update
     sudo apt-get install -y python3.6
     curl https://bootstrap.pypa.io/get-pip.py | sudo python3.6
-    sudo pip3.6 install scbw
-    scbw.play --install
+    cd docker
+    ./build_images.sh
 
 ### VNC
 
@@ -108,11 +108,7 @@ Download and install Python 3.6 release from [Python releases for Windows](https
 
 You might need to [add python / pip to PATH](https://stackoverflow.com/a/4855685).
 
-Install `scbw` package in PowerShell:
-
-    pip install scbw
-    scbw.play --install
-
+Follow [guide for installation using Powershell](docker/Setup in PowerShell -- instructions.md).
 
 ### VNC
 - [download RealVNC](https://www.realvnc.com/en/connect/download/viewer/windows/)
@@ -141,10 +137,7 @@ You might need to add `/Library` folder in `File Sharing` settings.
 
 Download and install Python 3.6 release from [Python releases for Mac Os X](https://www.python.org/downloads/mac-osx/)
 
-Install `scbw` package:
-
-    pip3.6 install scbw
-    scbw.play --install
+Follow [guide for installation using Powershell](docker/Setup in PowerShell -- instructions.md).
 
 ### VNC
 - [download RealVNC](https://www.realvnc.com/en/connect/download/viewer/macos/)

@@ -108,7 +108,7 @@ Download and install Python 3.6 release from [Python releases for Windows](https
 
 You might need to [add python / pip to PATH](https://stackoverflow.com/a/4855685).
 
-Follow [guide for installation using Powershell](docker/Setup in PowerShell -- instructions.md).
+Follow [guide for installation using Powershell](docker/Setup%20in%20PowerShell%20--%20instructions.md).
 
 ### VNC
 - [download RealVNC](https://www.realvnc.com/en/connect/download/viewer/windows/)
@@ -137,7 +137,7 @@ You might need to add `/Library` folder in `File Sharing` settings.
 
 Download and install Python 3.6 release from [Python releases for Mac Os X](https://www.python.org/downloads/mac-osx/)
 
-Follow [guide for installation using Powershell](docker/Setup in PowerShell -- instructions.md).
+Follow [guide for installation using Powershell](docker/Setup%20in%20PowerShell%20--%20instructions.md).
 
 ### VNC
 - [download RealVNC](https://www.realvnc.com/en/connect/download/viewer/macos/)

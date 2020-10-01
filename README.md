@@ -59,10 +59,6 @@ See [more usage examples](USAGE.md).
 - base image `ubuntu:bionic`
 - uses special [tournament module (TM)](github.com/Games-and-Simulations/sc-tm)
 
-## Contributing
-
-Pull requests are welcome! There are still many things to do, especially from [todo list](TODO.md).
-
 ## Citations
 
 If you use `sc-docker` in your (academic) work, please cite [our Technical Report](https://arxiv.org/abs/1801.02193):
